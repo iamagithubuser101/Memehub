@@ -1,0 +1,101 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: linear-gradient(rgba(255,255,255,0.7)), url(imgs/letroll.png);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+h1 {
+    text-align: center;
+    font-size: 65px;
+    color: #d60a0a;
+    margin-top: 15px;
+}
+
+.Opener {
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+    background-color: #d60a0a;
+    padding: 12px 20px;
+}
+
+.Opener button {
+    padding: 10px 20px;
+    background-color: rgb(0, 106, 255);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 3px;
+    color: white;
+}
+
+.Opener button:hover {
+    background-color: rgb(0, 106, 255);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 3px;
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.Recent p {
+    text-align: left;
+    font-size: 15px;
+}
+
+.memes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.meme-img {
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    border: solid 20px #d60a0a;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.meme-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.meme-img.zoom{
+    width: 400px;
+    z-index: 2;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 28px;
+  color: red;
+  cursor: pointer;
+  display: none;
+  z-index: 3;
+}
+
+.close.show {
+    display: block;
+  }
+
+.lk_btn {
+    padding: 10px 20px;
+    background-color: rgb(0, 106, 255);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 3px;
+    color: white;
+}
+
+.lk_btn:hover {
+    background-color: rgb(0, 106, 255);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 3px;
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
