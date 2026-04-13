@@ -63,17 +63,27 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-.meme-img.zoom{
-    width: 400px;
-    z-index: 2;
+.overlay{
+   position: fixed;
+   inset: 0;
+   background: rgba(0,0,0,0.7);
 }
 
-.close {
+.overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.overlay .close {
   position: absolute;
   top: 5px;
   right: 10px;
   font-size: 28px;
-  color: red;
+  color: white;
   cursor: pointer;
   display: none;
   z-index: 3;

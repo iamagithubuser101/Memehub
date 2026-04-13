@@ -30,23 +30,35 @@ function uploadMeme(event) {
     container.appendChild(newMeme);
 }
 
-const containers = document.querySelectorAll(".meme-container");
+document.addEventListener("click", (e) => {
+  const img = e.target.closest(".meme-img");
 
-  containers.forEach(container => {
-    const img = container.querySelector(".meme-img");
-    const close = container.querySelector(".close");
-    
-    img.addEventListener("click", () => {
-      document.querySelectorAll(".meme-img").forEach(i => i.classList.remove("zoom"));
-      document.querySelectorAll(".close").forEach(c => c.classList.remove("show"));
+  // Bild geklickt → Overlay öffnen
+  if (img) {
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
 
-      img.classList.add("zoom");
-      close.classList.add("show");
+    const bigImg = document.createElement("img");
+    bigImg.src = img.src;
+
+    const close = document.createElement("span");
+    close.classList.add("close");
+    close.innerHTML = "&times;";
+
+    overlay.appendChild(bigImg);
+    overlay.appendChild(close);
+    document.body.appendChild(overlay);
+
+    // schließen bei Klick auf ✖
+    close.addEventListener("click", () => {
+      overlay.remove();
     });
 
-    close.addEventListener("click", (e) => {
-      e.stopPropagation();
-      img.classList.remove("zoom");
-      close.classList.remove("show");
+    // schließen bei Klick auf Hintergrund
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        overlay.remove();
+      }
     });
-  });
+  }
+});
