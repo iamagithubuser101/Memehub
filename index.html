@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Memehub</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -11,7 +11,7 @@
     <h1>Lustige Memes</h1>
     <section class="Opener">
         <p>Willkommen auf unserer Meme-Seite! Hier findest du lustige Memes und kannst eigene hochladen. Viel Spaß beim Stöbern!</p>
-        <button>Hochladen</button>
+        <input type="file" id="upload_button" accept="image/*, .gif, .mp4" onchange="uploadMeme(event)">
     </section>
     <hr>
     <section class="Recent">

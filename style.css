@@ -20,7 +20,7 @@ h1 {
     padding: 12px 20px;
 }
 
-.Opener button {
+#upload_button {
     padding: 10px 20px;
     background-color: rgb(0, 106, 255);
     border: 2px solid rgb(255,255,255);
@@ -28,7 +28,7 @@ h1 {
     color: white;
 }
 
-.Opener button:hover {
+#upload_button:hover {
     background-color: rgb(0, 106, 255);
     border: 2px solid rgb(255,255,255);
     border-radius: 3px;
