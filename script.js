@@ -21,7 +21,7 @@ function uploadMeme(event) {
 
     var likeButton = document.createElement("button");
     likeButton.classList.add("lk_btn");
-    likeButton.innerHTML = "Like <span>0</span>";
+    likeButton.innerHTML = "&#128077<span>0</span>";
     likeButton.addEventListener("click", () => likeMeme(likeButton));
 
     newMeme.appendChild(img);
@@ -35,10 +35,8 @@ const containers = document.querySelectorAll(".meme-container");
   containers.forEach(container => {
     const img = container.querySelector(".meme-img");
     const close = container.querySelector(".close");
-
-    // Bild klicken → groß machen
+    
     img.addEventListener("click", () => {
-      // Optional: alle anderen schließen
       document.querySelectorAll(".meme-img").forEach(i => i.classList.remove("zoom"));
       document.querySelectorAll(".close").forEach(c => c.classList.remove("show"));
 
@@ -46,9 +44,8 @@ const containers = document.querySelectorAll(".meme-container");
       close.classList.add("show");
     });
 
-    // Kreuz klicken → schließen
     close.addEventListener("click", (e) => {
-      e.stopPropagation(); // verhindert, dass Bild direkt wieder aufgeht
+      e.stopPropagation();
       img.classList.remove("zoom");
       close.classList.remove("show");
     });
