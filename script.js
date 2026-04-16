@@ -30,6 +30,8 @@ function uploadMeme(event) {
     container.appendChild(newMeme);
 }
 
+alert("Pleas note that this website is currently under construction");
+
 document.addEventListener("click", (e) => {
   const img = e.target.closest(".meme-img");
 
